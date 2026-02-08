@@ -165,7 +165,7 @@ if [[ "$KSU_BRANCH" == "y" || "$KSU_BRANCH" == "Y" ]]; then
   fi
   export KSU_API_VERSION=$KSU_API_VERSION
 
-  VERSION_DEFINITIONS=$'define get_ksu_version_full\nv\\$1-'"$GIT_COMMIT_HASH"$'@cctv18\nendef\n\nKSU_VERSION_API := '"$KSU_API_VERSION"$'\nKSU_VERSION_FULL := v'"$KSU_API_VERSION"$'-'"$GIT_COMMIT_HASH"$'@cctv18'
+  VERSION_DEFINITIONS=$'define get_ksu_version_full\nv\\$1-'"$GIT_COMMIT_HASH"$'@伊蕾娜\nendef\n\nKSU_VERSION_API := '"$KSU_API_VERSION"$'\nKSU_VERSION_FULL := v'"$KSU_API_VERSION"$'-'"$GIT_COMMIT_HASH"$'@伊蕾娜'
 
   echo ">>> 正在修改 kernel/Kbuild 文件..."
   sed -i '/define get_ksu_version_full/,/endef/d' kernel/Kbuild
@@ -183,7 +183,7 @@ if [[ "$KSU_BRANCH" == "y" || "$KSU_BRANCH" == "Y" ]]; then
   grep -A10 "REPO_OWNER" kernel/Kbuild | head -n 10
   echo "------------------------------------------------"
   grep "KSU_VERSION_FULL" kernel/Kbuild
-  echo ">>> 最终版本字符串: v${KSU_API_VERSION}-${GIT_COMMIT_HASH}@cctv18"
+  echo ">>> 最终版本字符串: v${KSU_API_VERSION}-${GIT_COMMIT_HASH}@伊蕾娜"
   echo ">>> Version Code: ${KSU_VERSION_CODE}"
 elif [[ "$KSU_BRANCH" == "r" || "$KSU_BRANCH" == "R" ]]; then
   echo ">>> 拉取 ReSukiSU 并设置版本..."
